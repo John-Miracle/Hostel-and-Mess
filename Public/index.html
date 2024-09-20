@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./Pictures/global_favicon.png" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>VconnectIT</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script> 
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="#">
+          <i class="bx bx-grid-alt"></i>
+          <span class="link_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-user"></i>
+          <span class="link_name">User Profile</span>
+        </a>
+        <span class="tooltip">User Profile</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-chat"></i>
+          <span class="link_name">Message</span>
+        </a>
+        <span class="tooltip">Message</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="link_name">Attendance</span>
+        </a>
+        <span class="tooltip">Attendance</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-link'></i>
+          <span class="link_name">Important Links</span>
+        </a>
+        <span class="tooltip">Important Links</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-info-circle' ></i>
+          <span class="link_name">About</span>
+        </a>
+        <span class="tooltip">About</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-cog"></i>
+          <span class="link_name">Settings</span>
+        </a>
+        <span class="tooltip">Settings</span>
+      </li>
+      <li class="profile">
+        <div class="profile_details">
+          <img src="./Pictures/Profile.png" alt="profile image">
+          <div class="profile_content">
+            <div class="name">UserName</div>
+            <div class="designation">Role</div>
+          </div>
+        </div>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="text"><a href="#"><img title = "logo" src="./Pictures/global-network.png"><h3>V<span class = "con">connect</span>IT</h3></a></div>
+    <div class="Main-box"">
+      <nav class="nav">
+      </nav>
+      <div class="content">
+        <div class="scroll">
+          <div class="options">
+            <div onclick="show(0)">A Block</div>
+            <div onclick="show(1)">B Block</div>
+            <div onclick="show(2)">C Block</div>
+            <div onclick="show(3)">D Block</div>
+            <div onclick="show(16)">D-Annexe Block</div>
+            <div onclick="show(4)">E Block</div>
+            <div onclick="show(5)">F Block</div>
+            <div onclick="show(6)">G Block</div>
+            <div onclick="show(7)">H Block</div>
+            <div onclick="show(8)">J Block</div>
+            <div onclick="show(9)">K Block</div>
+            <div onclick="show(10)">L Block</div>
+            <div onclick="show(11)">M Block</div>
+            <div onclick="show(12)">N Block</div>
+            <div onclick="show(13)">P Block</div>
+            <div onclick="show(14)">Q Block</div>
+            <div onclick="show(15)">R Block</div>
+          </div>
+        </div>
+        <div class="preview">
+          <div class="preview-image"><img class="p-image" src="./Pictures/M-Block.jpg" title="Hostel-pic"></div>
+          <div class="Data">
+            <div class="block_name"> 
+              <h2 class ="b_name"></h2>
+            </div>
+            <div class="data_div"> 
+              <div class="head_nav"><h3>Overview</h3></div>
+              <div class="data_content"><p class="summary"></p></div>
+            </div>
+            <div class="data_div"> 
+              <div class="head_nav"><h3>Amenities</h3></div>
+              <div class="data_content">
+                <ul class="A_list">
+                </ul>
+              </div>
+            </div>
+            <div class="data_div"> 
+              <div class="head_nav"><h3>Bed-Count</h3></div>
+              <div class="data_content">
+                <ul class="B_list">
+                </ul>
+              </div>  
+            </div>
+
+            <div class="data_div"> 
+              <div class="head_nav"><h3>Mess Options and Vendors</h3></div>
+              <div class="data_content">
+                <ul class="M_list">
+                </ul>
+              </div>
+            </div>
+          </div>  
+          <div class="buttons-dis">
+            <button class="dis" id="floor-plan"><h3>Floor Plan ></h3></button>
+            <button class="dis" id ="room-image"><h3>Rooms ></h3></button>
+
+
+            <div class="popup" id="popup">
+              <nav class="navbar">
+                  <span class="close" id="close">&times;</span>
+              </nav>
+              <div class="popup-content">
+                  <iframe src="https://drive.google.com/file/d/1RbGGHiXoIhbzdbn6eL7YinVjXMabRQxk/preview" width="900" height="600" allow="autoplay" class="photo" title="Floor-Plan"></iframe>
+              </div>
+            </div>
+
+
+            <div class="popup-room" id="popup-room">
+              <nav class="navbar">
+                  <span class="close" id="close_2" style="font-size: 30;">&times;</span>
+              </nav>
+              <div class="popup-content-room">
+                <div class="slide-previous">
+                  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                </div>
+                <div class="carousel">
+                  <div class="carousel-slide active">
+                    <img class="slide" src="./Pictures/Community.png" alt="Image 1">
+                  </div>
+                  <div class="carousel-slide">
+                    <img class="slide" src="./Pictures/AI.png" alt="Image 2">
+                  </div>
+                  <div class="carousel-slide">
+                    <img class="slide" src="./Pictures/Calculator.png" alt="Image 3">
+                  </div>
+                </div>
+                <div class="slide-next">
+                  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div> 
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
